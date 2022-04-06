@@ -1,0 +1,12 @@
+inherit python2-wheel
+
+NAME="python-fasteners"
+VERSION=0.16.3
+RELEASE=1
+CATEGORY="Python"
+SUMMARY="Cross platform locks for threads and processes."
+DESCRIPTION="Python standard library provides a lock for threads (both a reentrant one, and a non-reentrant one, see below). Fasteners extends this, and provides a lock for processes, as well as Reader Writer locks for both threads and processes."
+SRC_URI="https://github.com/harlowja/fasteners/archive/refs/tags/${VERSION}.tar.gz"
+SRC_DIR="fasteners-${VERSION}"
+ARCH=noarch
+REQUIRES="python27-six"
