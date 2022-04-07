@@ -1,5 +1,6 @@
-inherit python2-wheel
+inherit python-wheel
 
+PYTHON_WHEEL_VERSIONS="2.7:3.8:3.9"
 NAME="python-fasteners"
 VERSION=0.16.3
 RELEASE=1
@@ -9,4 +10,5 @@ DESCRIPTION="Python standard library provides a lock for threads (both a reentra
 SRC_URI="https://github.com/harlowja/fasteners/archive/refs/tags/${VERSION}.tar.gz"
 SRC_DIR="fasteners-${VERSION}"
 ARCH=noarch
-REQUIRES="python27-six"
+PKG_NAMES+=" python27-fasteners"
+python27_fasteners_CONTENTS="usr/lib/python2.7/site-packages/ usr/share/doc/python27-fasteners/"
